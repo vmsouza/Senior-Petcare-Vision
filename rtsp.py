@@ -1,10 +1,6 @@
 import cv2
 import time
 
-from dotenv import load_dotenv
-
-load_dotenv()
-
 def capture_frame(rtsp_url, output_path="frame.jpg", warmup=2):
     cap = cv2.VideoCapture(rtsp_url)
 
