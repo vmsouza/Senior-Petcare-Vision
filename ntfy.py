@@ -2,10 +2,11 @@ import requests
 from datetime import datetime
 from image_utils import resize_for_ntfy
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 
-RTSP_URL = os.getenv("NTFY_TOPIC")
+NTFY_TOPIC = os.getenv("NTFY_TOPIC")
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
 

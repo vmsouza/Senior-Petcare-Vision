@@ -13,9 +13,7 @@ RTSP_URL = os.getenv("RTSP_URL")
 def main():
     try:
         print("📸 Capturando imagem da câmera...")
-        #image_path = capture_frame(RTSP_URL)
-        image_path = "frame.jpg"
-        #print(f"Frame salvo em: {image_path}")
+        image_path = capture_frame(RTSP_URL)
 
         print("🧠 Analisando imagem...")
         result_text = analyze_image(image_path)

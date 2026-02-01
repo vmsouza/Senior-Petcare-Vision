@@ -24,7 +24,7 @@ def analyze_image(
     img_with_coco_b64 = b64_image(exemplo_with_coco)
 
     payload = {
-        "model": "gpt-4.1-mini",
+        "model": "gpt-5-mini",
         "input": [
             {
                 "role": "system",
@@ -89,4 +89,16 @@ def analyze_image(
     response.raise_for_status()
     data = response.json()
 
-    return data["output"][0]["content"][0]["text"]
+    output_text = None
+
+    for item in data.get("output", []):
+        if item.get("type") == "message":
+            for content in item.get("content", []):
+                if content.get("type") == "output_text":
+                    output_text = content.get("text")
+                    break
+
+    if not output_text:
+        raise Exception(f"Resposta inesperada da API: {data}")
+
+    return output_text
