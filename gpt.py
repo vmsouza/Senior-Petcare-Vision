@@ -16,9 +16,18 @@ def b64_image(path):
 
 def analyze_image(
     image_to_check,
-    exemplo_no_coco="sem_coco.jpg",
-    exemplo_with_coco="com_coco.jpg"
+    exemplo_no_coco=None,
+    exemplo_with_coco=None
 ):
+
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    if exemplo_no_coco is None:
+        exemplo_no_coco = os.path.join(base_dir, "sem_coco.jpg")
+
+    if exemplo_with_coco is None:
+        exemplo_with_coco = os.path.join(base_dir, "com_coco.jpg")
+
     img_check_b64 = b64_image(image_to_check)
     img_no_coco_b64 = b64_image(exemplo_no_coco)
     img_with_coco_b64 = b64_image(exemplo_with_coco)

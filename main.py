@@ -6,7 +6,12 @@ from rtsp import capture_frame
 from gpt import analyze_image
 from ntfy import send_ntfy_alert
 
-load_dotenv()
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+os.chdir(BASE_DIR)
+
+load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 RTSP_URL = os.getenv("RTSP_URL")
 
