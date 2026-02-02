@@ -46,6 +46,18 @@ Tudo isso de forma **automatizada, discreta e sem intervenção humana**.
 
 ---
 
+## 🛠️ Instalação
+
+1. Copie o arquivo env-example para .env
+2. Ajuste o conteúdo do .env com seus valores
+3. Substitua as fotos 'sem_coco.jpg' e 'com_coco.jpg' por fotos reais do seu ambiente.
+4. Ajuste o ntfy.py com o alerta desejado.
+
+- OpenIA: necessário ter uma chave de api
+- Ntfy.sh: comece um grupo com o nome preferido
+
+---
+
 ## 🚨 Exemplo de alerta
 
 > 🚨 Evento detectado no ambiente  
@@ -53,6 +65,8 @@ Tudo isso de forma **automatizada, discreta e sem intervenção humana**.
 > Ação recomendada: limpeza imediata
 
 O alerta chega **em tempo real**, permitindo agir rapidamente mesmo estando em outro cômodo ou fora de casa.
+
+Você pode alterar o alerta diretamente no arquivo ntfy.py.
 
 ---
 
