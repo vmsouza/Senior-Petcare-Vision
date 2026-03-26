@@ -41,7 +41,7 @@ def analyze_image(
                     "Você é um classificador visual especializado em identificar "
                     "fezes de cachorro no piso de uma sala. "
                     "Ignore pessoas, cachorro, sombras, reflexos e iluminação. "
-                    "Ignore o cachorro deitado. Ignore o pote derrubado. Ignore o tapete enrolado"
+                    "Ignore o cachorro deitado, de pé ou caminhando. Ignore o pote derrubado. Ignore o tapete enrolado"
                     "Considere apenas o piso e manchas maiores escuras em forma de filetes grossos"
                 )
             },
